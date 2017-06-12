@@ -1,0 +1,32 @@
+{
+  "name": "padawan-javascript",
+  "version": "1.0.0",
+  "description": "mail template parser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CindySalinas/padawan-javascript.git"
+  },
+  "keywords": [
+    "node.js",
+    "mail",
+    "parser"
+  ],
+  "author": "Cindy Salinas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CindySalinas/padawan-javascript/issues"
+  },
+  "homepage": "https://github.com/CindySalinas/padawan-javascript#readme",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
