@@ -1,8 +1,9 @@
 'use strict';
 const logger = require('winston');
-const { forEach, find, trim } = require('lodash');
 const mailData = require('./static/mails');
 const firstType = require('./parsers/firstType');
+const secondType = require('./parsers/secondType');
+const thirdType = require('./parsers/thirdType');
 
 // subject regexs
 const type1 = new RegExp("^\\(?\\w[A-Z0-9]{1,}\\)? ?-? ?#? \\(?[0-9]{1,}\\)?");
@@ -24,7 +25,17 @@ const createMailGroup = (mails) => {
   });
 };
 
+// init to parse all emails
+const init = () => {
+  createMailGroup(mailData);
+  logger.info(`Data for mails that math first type`);
+  firstType(mailGroups.type1).forEach((e, i) => console.log(`Mail #${i+1}:`, e));
+  console.log('--------------------------------------');
+  logger.info(`Data for mails that math second type`);
+  secondType(mailGroups.type2).forEach((e, i) => console.log(`Mail #${i+1}:`, e));
+  console.log('--------------------------------------');
+  logger.info(`Data for mails that math third type`);
+  thirdType(mailGroups.type3).forEach((e, i) => console.log(`Mail #${i+1}:`, e));
+};
 
-
-createMailGroup(mailData);
-console.log(firstType(mailGroups.type1))
+init();
