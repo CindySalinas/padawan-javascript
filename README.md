@@ -4,7 +4,7 @@ Parse emails with differents content type, extracting all relevant data
 
 ## How to start
 
-**Note** that this seed project requires node v6.10.x or higher
+**Note** This project requires node v6.10.x or higher
 
 In order to start the seed use:
 
