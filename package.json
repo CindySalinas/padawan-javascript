@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/CindySalinas/padawan-javascript#readme",
   "dependencies": {
+    "jsdom": "^11.0.0",
     "lodash": "^4.17.4",
     "winston": "^2.3.1"
   },
